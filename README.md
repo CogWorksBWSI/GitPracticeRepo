@@ -98,7 +98,7 @@ git push origin (branch name)
 Origin designates what remote we are pushing to and branch indicates what branch we're pushing from.
 
 ### Merging to the Master Branch OR Pull Requests
-You've now edited your code on your seperate branch and it was successful! Time to merge back into the master branch. If you're working on your own code, you can just merge back to the master branch with no trouble. 
+You've now edited your code on your seperate branch and it was successful! Time to merge back into the master branch. If you're working on your own code, you can just merge back to the master branch with no trouble. However, if you're working on code with others you'll want to make a pull request instead.
 
 #### Merging to the Master Branch
 First, we switch back to the master branch:
@@ -127,7 +127,7 @@ git push origin master
 Congrats, you've merged the branches successfully!
 
 #### Pull Requests
-If you're working on a project, instead of just merging you need to make a **pull request**. To make a pull request, go on github, head to the project repo, find "pull requests" and open a new one, describing why the pull request is necessary. The person who runs the repo would then decide if your request is good or not, and then either accept or reject. Read more about pull requests [here](https://help.github.com/articles/creating-a-pull-request/) 
+If you're working on a project, instead of just merging you need to make a **pull request**. To make a pull request, (after your branch is committed and up to date) go on github, head to the project repo, find "pull requests" and open a new one, describing why the pull request is necessary. The person who runs the repo would then decide if your request is good or not, and then either accept or reject. Read more about pull requests [here](https://help.github.com/articles/creating-a-pull-request/) 
 
 ## Returning to a previous commit
 Did you accidentally commit something that messed up a bunch of things? Do you wish you could go back in time to when your code (sort of) worked? Luckily, we have the ability to time travel (metaphorically) thanks to Github. So, first we need to see all of our old commits to decide which one to go back to. Type out: 
