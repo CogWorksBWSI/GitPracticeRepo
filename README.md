@@ -31,7 +31,7 @@ Now, once we add and stage them for commit, we actually need to commit!
 
 The git tutorial describes committing your changes as "taking a snapshot of the changes to include them in the project's history." I like to think of commits instead as **save states** in a video game. For example, you tend to save your game after every milestone: getting a cool item, beating a mini boss, after a LONG cutscene, etc. That way, if you mess up or your game turns off, you have a save file to head back to. Commits are just like that! After you finish a function or make a new class and commit, if at any point you mess up you can go back to your previous commits.
 
-So, how do we commit? Any changes that you've *added* will be *committed* (become a part of the project's history) once you type:
+So, how do we commit? Any changes that you've *staged* (added) will be *committed* (become a part of the project's history) once you type:
 
 ```bash
 git commit -m "my first commit!"
@@ -44,9 +44,9 @@ Another important note is that, if you do NOT add a file and commit, the file is
 ## Pushing
 Then, once you've added your file and committed it, type:
 ```bash
-git push
+git push origin master
 ```
-This final command updates the remote repository with any commits made locally to a branch. Things that are NOT committed will NOT be updated in the remote repository. 
+This final command updates the remote repository (origin) with any commits made locally to a branch (master). Things that are NOT committed will NOT be updated in the remote repository. 
 
 Sweet! You've *pushed* your changes to the remote repository and now it has your fun .txt file!
 
@@ -54,7 +54,7 @@ Sweet! You've *pushed* your changes to the remote repository and now it has your
 Let's say that a ton of more people have ALSO written jokes and pushed them to the remote repository. Unfortunately, your own local repository does not have those changes! We can update our local repository with THIS: 
 
 ```bash
-git pull
+git pull origin master
 ```
 
 This is great if you're working in a team and one of your teammates has made changes that they want to share to the group. 
@@ -62,7 +62,7 @@ This is great if you're working in a team and one of your teammates has made cha
 ## Merges
 Not only can you add new files, you can also edit existing ones and update them on the remote repository the exact same way you'd add new ones. Git will MERGE your local repository with the remote one, updating it.
 
-Git is even smart enough to merge lines in the *same file*. Let's say Ryan and i are working on two seperate parts of code in `file1.py`. I write a function called `hello_world()` and Ryan writes a function called `random_function()`. First, I do not have Ryan's function on my local repository and he doesn't have mine. But, we both decide to commit and push to the remote repository. Git will actually *merge* our two versions of `file1.py` to  make one with *both `hello_world()` and `random_function()`.* However, something to note is that if multiple people edit the the same lines/sections at once and try to push their commits, you might get an error. More on that later!
+Git is even smart enough to merge lines in the *same file*. Let's say Ryan and i are working on two seperate parts of code in `file1.py`. I write a function called `hello_world()` and Ryan writes a function called `random_function()`. First, I do not have Ryan's function on my local repository and he doesn't have mine. But, we both decide to commit and push to the remote repository. Git will actually *merge* our two versions of `file1.py` to  make one with *both `hello_world()` and `random_function()`.* However, something to note is that if multiple people edit the the same lines/sections at once and try to push their commits, you might get an error called a **merge conflict**. More on that later!
 
 ## Branches
 Let's say you're working on a bit of an *ambitious project* that you're not sure will work or not, and, while you want to commit your changes, you don't want to update the remote repository and lose the old work. Another cool feature of github is making different **branches**.
@@ -112,7 +112,7 @@ git merge (branch name)
 
 If you feel so inclined to delete your previous branch, use:
 ```bash
-git branch -d future-plans 
+git branch -d (branch name) 
 ```
 
 Now, the branches are merged on YOUR computer. It's time to update the remote repository to reflect that! Just like we're pushing from a branch, add and commit and finally push like this:
