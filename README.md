@@ -97,8 +97,11 @@ git push origin (branch name)
 ```
 Origin designates what remote we are pushing to and branch indicates what branch we're pushing from.
 
-### Merging to the master branch
-You've now edited your code on your seperate branch and it was successful! Time to merge back into the master branch. First, we switch back to the master branch:
+### Merging to the Master Branch OR Pull Requests
+You've now edited your code on your seperate branch and it was successful! Time to merge back into the master branch. If you're working on your own code, you can just merge back to the master branch with no trouble. 
+
+#### Merging to the Master Branch
+First, we switch back to the master branch:
 
 ```bash
 git checkout master 
@@ -124,9 +127,7 @@ git push origin master
 Congrats, you've merged the branches successfully!
 
 #### Pull Requests
-A note about merging braches. Good practice is generally to make a *pull request*, especially if you're editing code that's not yours or working on a project with a project leader to review the changes. Or, sometimes permissions are set so you are not allowed to merge to the master branch. To make a pull request, go on github, head to the project repo, find "pull requests" and open a new one, describing why the pull request is necessary. The person who runs the repo would then decide if your request is good or not, and then either accept or reject. Read more about pull requests [here](https://help.github.com/articles/creating-a-pull-request/) 
-
-However, this is not always necessary to do, especially if you're all working in a close-knit project.
+If you're working on a project, instead of just merging you need to make a **pull request**. To make a pull request, go on github, head to the project repo, find "pull requests" and open a new one, describing why the pull request is necessary. The person who runs the repo would then decide if your request is good or not, and then either accept or reject. Read more about pull requests [here](https://help.github.com/articles/creating-a-pull-request/) 
 
 ## Returning to a previous commit
 Did you accidentally commit something that messed up a bunch of things? Do you wish you could go back in time to when your code (sort of) worked? Luckily, we have the ability to time travel (metaphorically) thanks to Github. So, first we need to see all of our old commits to decide which one to go back to. Type out: 
