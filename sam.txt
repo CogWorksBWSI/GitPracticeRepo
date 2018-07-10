@@ -1,0 +1,35 @@
+Why did the integer sink?
+It wasn't floating.
+
+Why was the string so loud?
+It was immutable.
+
+Why does Python live on land?
+It's above C level.
+
+Why did the dictionary have such good morals?
+It knew its key values.
+
+Why did GitHub break up with Python?
+Python wouldn't commit.
+
+Why is C so rude?
+It has no class.
+
+Why was the library so bad?
+It just couldn't function.
+
+Why was the library so useless?
+It didn't use good methods.
+
+Why could Python understand confusing things?
+It was really good at interpreting.
+
+Why can't Python handle errors when you try to exit a loop but you aren't in one?
+Python just can't catch a break.
+
+Concerned Parent: If all your friends jumped off of a cliff, would you too?
+Machine Learning Algorithm: Yes.
+
+A developer was accused of bad coding practices.
+He refused to comment.
