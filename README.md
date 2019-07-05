@@ -4,7 +4,7 @@ Hello everyone! This is a fun dummy repository to practice and hone your github 
 ## Setting it Up
 - [Download](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) `git` onto your computer.
 * Windows users must install [git bash](https://gitforwindows.org/). Follow these [installation instructions](https://github.com/rsokl/CogWorks_2017_Info/blob/master/WindowsGitInstructions.md)
-- Creat a [github account](https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration) if you haven't already and email your username to either me (megan.kaye38@gmail.com) or Ryan.
+- Create a [github account](https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration) if you haven't already and send Ryan or Petar your GitHub username over Slack.
 - Link git with [your github account via SSH](https://help.github.com/articles/connecting-to-github-with-ssh/) by following the steps in the linked page. This will save your GitHub login information (in a secure way) on your computer, allowing you to seamlessly push/pull to/from your GitHub repositories from your local computer.
 
 ## Cloning
@@ -16,7 +16,7 @@ What is cloning? Pretty much what it sounds like. All of the cool content in thi
 
 In your terminal, you're going to want to type:
 ```bash
-git clone https://github.com/LLCogWorks2018/DummyRepo.git
+git clone git@github.com:CogWorksBWSI/DummyRepo.git
 ```
 Basically, what this does is reaches out to github and copies all of its contents into a *local repository* on your computer. 
 
