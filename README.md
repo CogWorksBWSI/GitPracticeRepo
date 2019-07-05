@@ -16,7 +16,7 @@ What is cloning? Pretty much what it sounds like. All of the cool content in thi
 
 In your terminal, you're going to want to type:
 ```bash
-git clone git@github.com:CogWorksBWSI/DummyRepo.git
+git clone git@github.com:CogWorksBWSI/GitPracticeRepo.git
 ```
 Basically, what this does is reaches out to github and copies all of its contents into a *local repository* on your computer. 
 
