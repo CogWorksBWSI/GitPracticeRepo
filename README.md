@@ -11,7 +11,7 @@ The FIRST thing you need to do is clone this repository onto your desktop.
 
 - Notes: What IS a repository? From GitHub's official tutorials, a repository "encompasses the entire collection of files and folders associated with a project, along with each file’s revision history."
 
-What is cloning? Pretty much what it sounds like. All of the cool content in this DummyRepo is currently up on GitHub (in what's called a **remote repository**), and we want it on our computer (in a **local repository**). So, we need to *clone* a copy of it onto our computer!
+What is cloning? Pretty much what it sounds like. All of the cool content in this DummyRepo is currently up on GitHub (in what's called a **remote repository**), and we want it on our computer (in a **local repository**). So, we need to *clone* a copy of it onto our computer! This also means that in order to clone a repo, you must be connected to the internet.
 
 In your terminal, you're going to want to type:
 ```bash
@@ -22,7 +22,7 @@ Basically, what this does is reaches out to GitHub and copies all of its content
 Congrats! Now, you have a repository on your computer. Usually, repositories cloned from the Cog*Works group are full of interesting Jupyter Notebooks to read and complete, Python packages that do fun stuff, and much more! However, this one is pretty empty except for our README. We can change that, though!
 
 ## Adding Files
-Adding files to a local repository is the exact same way you'd add files to a folder, however adding it to the remote repository on GitHub takes a few steps. For the sake of practice, make a .txt file using your name (if your name is John Smith, something like john_smith.txt will work). To make it extra fun, write a joke! Nothing you would get attached to, because people are probably going to mess with these files while testing out the dummy repository.
+Adding files to a local repository is the exact same way you'd add files to a folder, however adding it to the remote repository on GitHub takes a few steps. For the sake of practice, make a .txt file using your name (if your name is John Smith, something like john_smith.txt will work). To make it extra fun, write a joke! Nothing you would get attached to, because people are probably going to mess with these files while testing out the dummy repository. 
 
 Great job! Now, your local repository has a .txt file with a joke. Now, we also want to *change* the remote repository to reflect the updates we made. Before you add files, you should first remind yourself of what files you have added/changed in the first place. You can do this by:
 
@@ -36,7 +36,7 @@ This command will list all of the files you changed in a color-coded fashion, bu
 git add (your full name here).txt
 ```
 
-When you add files, you're **staging** them for commit, and you're beginning to **track** them. Tracking files in git is super convenient- once they're tracked, you can see previous edits and versions. 
+When you add files, you're **staging** them for commit, and you're beginning to **track** them. You can also stage files regardless of internet connection since it isn't uploading or downloading anything. Tracking files in git is super convenient- once they're tracked, you can see previous edits and versions. 
 
 Now, once we add and stage them for commit, we actually need to commit!
 
@@ -52,6 +52,8 @@ git commit -m "my first commit!"
 
 The `-m` is a very important part of the command. It designates that, the thing in quotations, is a *commit message*. With EVERY commit you **need** a commit message! (If you don't do -m, it'll take you to a weird screen to write your own commit message. -m is just easier.) Commit messages are just a helpful descriptor of what you changed and why the change was necessary, but really they can be anything you like.
 
+Like staging files, committing does not require access to the internet; your changes are not actually uploaded until you push, which you'll learn about in the next section.
+
 Another important note is that, if you do NOT add a file and commit, the file is not committed even if it is edited and saved. More on this later!
 
 ## Pushing
@@ -63,6 +65,8 @@ This final command updates the remote repository (origin) with any commits made 
 
 Sweet! You've *pushed* your changes to the remote repository and now it has your fun .txt file!
 
+As a note, since your remote repository is stored on GitHub, you will need an internet connection to do so.
+
 ## Pulling
 Let's say that a ton of more people have ALSO written jokes and pushed them to the remote repository. Unfortunately, your own local repository does not have those changes! We can update our local repository with THIS: 
 
@@ -71,6 +75,8 @@ git pull origin master
 ```
 
 This is great if you're working in a team and one of your teammates has made changes that they want to share to the group. 
+
+Like pushing, you will need internet to pull from GitHub.
 
 ## Merges
 Not only can you add new files, you can also edit existing ones and update them on the remote repository the exact same way you'd add new ones. Git will MERGE your local repository with the remote one, updating it.
@@ -112,6 +118,8 @@ Origin designates what remote we are pushing to and branch indicates what branch
 
 ### Merging to the Master Branch OR Pull Requests
 You've now edited your code on your seperate branch and it was successful! Time to merge back into the master branch. If you're working on your **own code**, you can just merge back to the master branch with no trouble. However, if you're working on **code with others** you'll want to make a pull request instead.
+
+Pull requests are done through GitHub itself and not through Git. In your repository, at the top of the page you will see a tab that says "Pull requests" where you can make a new pull request. Pull requests are useful especially on larger/critical projects where every commit needs to be verified before being added to the code.
 
 #### Merging to the Master Branch
 First, we switch back to the master branch:
