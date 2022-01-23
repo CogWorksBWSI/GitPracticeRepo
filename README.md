@@ -1,37 +1,42 @@
-# Github practice!
-Hello everyone! This is a fun dummy repository to practice and hone your github skills. We're going to be using Github a LOT, so it's important you get good at all of this.
+# GitHub practice!
+Hello everyone! This is a fun dummy repository to practice and hone your GitHub skills. We're going to be using GitHub a LOT, so it's important you get good at all of this.
 
 ## Setting it Up
 - [Download](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) `git` onto your computer.
 * Windows users must install [git bash](https://gitforwindows.org/). Follow these [installation instructions](https://github.com/rsokl/CogWorks_2017_Info/blob/master/WindowsGitInstructions.md)
-- Create a [github account](https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration) if you haven't already and send Ryan or Petar your GitHub username over Slack.
 - Link git with [your github account via SSH](https://help.github.com/articles/connecting-to-github-with-ssh/) by following the steps in the linked page. This will save your GitHub login information (in a secure way) on your computer, allowing you to seamlessly push/pull to/from your GitHub repositories from your local computer.
 
 ## Cloning
 The FIRST thing you need to do is clone this repository onto your desktop. 
 
-- Notes: What IS a repository? From github's official tutorials, a repository "encompasses the entire collection of files and folders associated with a project, along with each file’s revision history."
+- Notes: What IS a repository? From GitHub's official tutorials, a repository "encompasses the entire collection of files and folders associated with a project, along with each file’s revision history."
 
-What is cloning? Pretty much what it sounds like. All of the cool content in this DummyRepo is currently up on Github (in what's called a **remote repository**), and we want it on our computer (in a **local repository**). So, we need to *clone* a copy of it onto our computer!
+What is cloning? Pretty much what it sounds like. All of the cool content in this DummyRepo is currently up on GitHub (in what's called a **remote repository**), and we want it on our computer (in a **local repository**). So, we need to *clone* a copy of it onto our computer! This also means that in order to clone a repo, you must be connected to the internet.
 
 In your terminal, you're going to want to type:
 ```bash
 git clone git@github.com:CogWorksBWSI/GitPracticeRepo.git
 ```
-Basically, what this does is reaches out to github and copies all of its contents into a *local repository* on your computer. 
+Basically, what this does is reaches out to GitHub and copies all of its contents into a *local repository* on your computer. 
 
-Congrats! Now, you have a repository on your computer. Usually, repositories cloned from the Cogworks group are full of interesting Jupyter Notebooks to read and complete, python packages that do fun stuff, and much more! However, this one is pretty empty except for our README. We can change that, though!
+Congrats! Now, you have a repository on your computer. Usually, repositories cloned from the CogWorks group are full of interesting Jupyter Notebooks to read and complete, Python packages that do fun stuff, and much more! However, this one is pretty empty except for our README. We can change that, though!
 
 ## Adding Files
-Adding files to a local repository is the exact same way you'd add files to a folder, however adding it to the remote repository on github takes a few steps. For the sake of practice, why don't you make a basic .txt file and put it in your repository? To make it extra fun, write a joke! Nothing you would get attached to, because people are probably going to mess with these files while testing out the dummy repository.
+Adding files to a local repository is the exact same way you'd add files to a folder, however adding it to the remote repository on GitHub takes a few steps. For the sake of practice, make a .txt file using your name (if your name is John Smith, something like john_smith.txt will work). To make it extra fun, write a joke! Nothing you would get attached to, because people are probably going to mess with these files while testing out the dummy repository. 
 
-Great job! Now, your local repository has a .txt file with a joke. Now, we also want to *change* the remote repository to reflect the updates we made. So, the first thing we do is stage the changes, by:
+Great job! Now, your local repository has a .txt file with a joke. Now, we also want to *change* the remote repository to reflect the updates we made. Before you add files, you should first remind yourself of what files you have added/changed in the first place. You can do this by:
 
 ```bash
-git add (my file name)
+git status
 ```
 
-When you add files, you're **staging** them for commit, and you're beginning to **track** them. Tracking files in git is super convienent- once they're tracked, you can see previous edits and versions. 
+This command will list all of the files you changed in a color-coded fashion, but since you only added one file, only one file shows up. Now that you've reminded yourself of the file(s) you wanted to add, you can stage the changes, by:
+
+```bash
+git add (your full name here).txt
+```
+
+When you add files, you're **staging** them for commit, and you're beginning to **track** them. You can also stage files regardless of internet connection since it isn't uploading or downloading anything. Tracking files in git is super convenient- once they're tracked, you can see previous edits and versions. 
 
 Now, once we add and stage them for commit, we actually need to commit!
 
@@ -47,6 +52,8 @@ git commit -m "my first commit!"
 
 The `-m` is a very important part of the command. It designates that, the thing in quotations, is a *commit message*. With EVERY commit you **need** a commit message! (If you don't do -m, it'll take you to a weird screen to write your own commit message. -m is just easier.) Commit messages are just a helpful descriptor of what you changed and why the change was necessary, but really they can be anything you like.
 
+Like staging files, committing does not require access to the internet; your changes are not actually uploaded until you push, which you'll learn about in the next section.
+
 Another important note is that, if you do NOT add a file and commit, the file is not committed even if it is edited and saved. More on this later!
 
 ## Pushing
@@ -58,6 +65,8 @@ This final command updates the remote repository (origin) with any commits made 
 
 Sweet! You've *pushed* your changes to the remote repository and now it has your fun .txt file!
 
+As a note, since your remote repository is stored on GitHub, you will need an internet connection to do so.
+
 ## Pulling
 Let's say that a ton of more people have ALSO written jokes and pushed them to the remote repository. Unfortunately, your own local repository does not have those changes! We can update our local repository with THIS: 
 
@@ -67,13 +76,15 @@ git pull origin master
 
 This is great if you're working in a team and one of your teammates has made changes that they want to share to the group. 
 
+Like pushing, you will need internet to pull from GitHub.
+
 ## Merges
 Not only can you add new files, you can also edit existing ones and update them on the remote repository the exact same way you'd add new ones. Git will MERGE your local repository with the remote one, updating it.
 
-Git is even smart enough to merge lines in the *same file*. Let's say Ryan and i are working on two seperate parts of code in `file1.py`. I write a function called `hello_world()` and Ryan writes a function called `random_function()`. First, I do not have Ryan's function on my local repository and he doesn't have mine. But, we both decide to commit and push to the remote repository. Git will actually *merge* our two versions of `file1.py` to  make one with *both `hello_world()` and `random_function()`.* However, something to note is that if multiple people edit the the same lines/sections at once and try to push their commits, you might get an error called a **merge conflict**. More on that later!
+Git is even smart enough to merge lines in the *same file*. Let's say Ryan and I are working on two seperate parts of code in `file1.py`. I write a function called `hello_world()` and Ryan writes a function called `random_function()`. First, I do not have Ryan's function on my local repository and he doesn't have mine. But, we both decide to commit and push to the remote repository. Git will actually *merge* our two versions of `file1.py` to  make one with *both `hello_world()` and `random_function()`.* However, something to note is that if multiple people edit the the same lines/sections at once and try to push their commits, you might get an error called a **merge conflict**. More on that later!
 
 ## Branches
-Let's say you're working on a bit of an *ambitious project* that you're not sure will work or not, and, while you want to commit your changes, you don't want to update the remote repository and lose the old work. Another cool feature of github is making different **branches**.
+Let's say you're working on a bit of an *ambitious project* that you're not sure will work or not, and, while you want to commit your changes, you don't want to update the remote repository and lose the old work. Another cool feature of GitHub is making different **branches**.
 
 ### Creating a new branch
 First, let's start with creating our branch with:
@@ -107,6 +118,8 @@ Origin designates what remote we are pushing to and branch indicates what branch
 
 ### Merging to the Master Branch OR Pull Requests
 You've now edited your code on your seperate branch and it was successful! Time to merge back into the master branch. If you're working on your **own code**, you can just merge back to the master branch with no trouble. However, if you're working on **code with others** you'll want to make a pull request instead.
+
+Pull requests are done through GitHub itself and not through Git. In your repository, at the top of the page you will see a tab that says "Pull requests" where you can make a new pull request. Pull requests are useful especially on larger/critical projects where every commit needs to be verified before being added to the code.
 
 #### Merging to the Master Branch
 First, we switch back to the master branch:
@@ -154,11 +167,10 @@ The . is important, as it sets your branch to the current one. Finally, commit y
 
 **Important note:** Returning to a previous commit will only "rewind" the TRACKED FILES (deleted ones, renamed ones, as long as they're tracked!). Any files that are NOT tracked will not be reset.
 
-
 ## Common Conflicts and Fun Things
 
 ### Merge conflicts!
-Let's say Ryan and I are both editing a file. We both pull the changes to the repository and decide to work on the same file. However, I decide that I want to update variable `x` to be equal to 5 whereas ryan updates `x` to be equal to 7. We both change the SAME line in the code, and then decide to push/pull our changes.
+Let's say Ryan and I are both editing a file. We both pull the changes to the repository and decide to work on the same file. However, I decide that I want to update variable `x` to be equal to 5 whereas Ryan updates `x` to be equal to 7. We both change the SAME line in the code, and then decide to push/pull our changes.
 
 ```python
 <<<<<<< HEAD
@@ -171,9 +183,37 @@ print (x)
 
 Now we get a merge conflict! What does this mean, exactly? Well, git is usually pretty smart about being able to merge changes. If Ryan and I edit two seperate variables/functions/chunks of code even if it's on the same file, git can usually merge it. However, if we both make conflicting changes (editing the SAME line to two different things, editing nearby lines, etc.) git gets thrown. Git actually EDITS my file to show me where I messed up. 
 
-Luckily, this is an easy fix. Delete the `<<<<<<< HEAD` and the `=======` and the `>>>>>>> my_branch`, and then pick which edit you'd like to use. Re-push, and you should be good!
+Luckily, this is an easy fix. Delete the `<<<<<<< HEAD` and the `=======` and the `>>>>>>> my_branch`, and then pick which edit you'd like to use. Re-push, and you should be good! Some code editors like Visual Studio Code will actually highlight the merge conflicts and give you a dialog so you can quickly pick the version you would like!
 
-**Note**: Jupyter Notebooks are NOT git friendly in this sense, so good practice is that people do not work on the same notebook at the same time because merge conflicts will BREAK your notebooks.
+**Note**: Jupyter Notebooks are **NOT** git friendly in this sense, so good practice is that people do not work on the same notebook at the same time because merge conflicts will **BREAK** your notebooks.
+
+Now that we know what merge conflicts are, let's try to create one. We can do this by creating two branches that conflict with each other and then trying to merge them.
+
+First, create a new branch, but do not checkout to the new branch.
+
+```bash
+git branch (insert name of branch here)
+```
+
+Edit your joke text file from earlier, stage it, and commit it. Now, checkout to the branch you created by running:
+
+```bash
+git checkout (name of the branch you just created)
+```
+
+Like before, change the file **on the same line(s) that you just changed**, stage it, and commit it. Then, checkout to the master branch, and when you run:
+
+```bash
+git merge (name of the branch you just created)
+```
+you should be getting an error, telling you:
+
+```
+CONFLICT (content): Merge conflict in (filename here)
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+Now, if you close and reopen the text file you were modifying, you should see a merge conflict like the one shown above. Pick the version you would like to keep, stage it, and commit it. Your merge conflict is now solved!
 
 ### Un-committing/Un-adding?
 Uh oh I did NOT mean to commit that file. Luckily, if you want to un-commit, just switch to a previous commit (detailed in the section above).
@@ -208,3 +248,4 @@ This is the dummy repo so feel free to wreak some havoc on it. Push, pull, make 
 Here are some links to check out some more fun stuff to do with Github. Google cool github tricks, etc. Explore and have fun!
 https://help.github.com/articles/github-glossary/
 https://guides.github.com/
+
