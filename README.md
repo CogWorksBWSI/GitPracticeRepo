@@ -246,6 +246,6 @@ Github is so popular that most IDE's have integrated it! For example, some can t
 This is the dummy repo so feel free to wreak some havoc on it. Push, pull, make as many branches as you'd like, whatever you feel will get you the most practice! 
 
 Here are some links to check out some more fun stuff to do with Github. Google cool github tricks, etc. Explore and have fun!
-https://help.github.com/articles/github-glossary/
-https://guides.github.com/
-
+- https://git-scm.com/book/en/v2
+- https://help.github.com/articles/github-glossary/
+- https://guides.github.com/
