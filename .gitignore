@@ -5,6 +5,7 @@ __pycache__/
 
 # C extensions
 *.so
+aaron_yang.txt
 
 # Distribution / packaging
 .Python
