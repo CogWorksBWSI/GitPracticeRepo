@@ -4,3 +4,4 @@ another changes
 yes
 dummy branch commit
 dummy brnach second commit
+dummy branch third commit
