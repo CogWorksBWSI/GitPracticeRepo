@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+/hello.txt
 # C extensions
 *.so
 aaron_yang
