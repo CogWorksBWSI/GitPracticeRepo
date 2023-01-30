@@ -2,10 +2,13 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+/hello.txt
 # C extensions
 *.so
-
+/ho.txt
+/yes.txt
+aaron_yang
+.rb
 # Distribution / packaging
 .Python
 build/

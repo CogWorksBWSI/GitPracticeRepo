@@ -1,1 +1,8 @@
 Whats a ghost's favorite type? A booooooooooolean.
+3rd commit 
+another changes
+yes
+dummy branch commit
+dummy brnach second commit
+dummy branch third commit
+dummy branch fourth commit
