@@ -5,6 +5,7 @@ __pycache__/
 /hello.txt
 # C extensions
 *.so
+/yes.txt
 aaron_yang
 .rb
 # Distribution / packaging
