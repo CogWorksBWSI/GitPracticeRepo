@@ -1,6 +1,7 @@
 # GitHub practice!
 Hello everyone! This is a fun dummy repository to practice and hone your GitHub skills. We're going to be using GitHub a LOT, so it's important you get good at all of this.
 
+Hi ! creer un conflit dans main
 ## Setting it Up
 - [Download](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) `git` onto your computer.
 * Windows users must install [git bash](https://gitforwindows.org/). Follow these [installation instructions](https://github.com/rsokl/CogWorks_2017_Info/blob/master/WindowsGitInstructions.md)
