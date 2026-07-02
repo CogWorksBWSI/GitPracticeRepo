@@ -242,6 +242,8 @@ Github is so popular that most IDE's have integrated it! For example, some can t
  * `git diff` - show the changes between commits, commit and working tree, etc
  * `git init` - creates a .git file and signals that this directory is a repository. **Do not make a repository within another repository, it can lead to come confusion**
 
+---
+
 ## Test it out for yourself!
 This is the dummy repo so feel free to wreak some havoc on it. Push, pull, make as many branches as you'd like, whatever you feel will get you the most practice! 
 
