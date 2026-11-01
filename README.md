@@ -249,3 +249,6 @@ Here are some links to check out some more fun stuff to do with Github. Google c
 - https://git-scm.com/book/en/v2
 - https://help.github.com/articles/github-glossary/
 - https://guides.github.com/
+## Practical 8 Update
+
+This repository demonstrates how Git branches and pull requests help manage code changes.
